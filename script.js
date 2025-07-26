@@ -13,12 +13,17 @@ const fileUploadBox = document.getElementById('file-upload');
 const submitBtn = document.getElementById('submitBtn');
 const resultBox = document.getElementById('result');
 
-// Theme Toggle Logic
+// Theme Toggle Logic - Optimized
 themeToggle.addEventListener('click', () => {
   const isLight = htmlTag.getAttribute('data-theme') === 'light';
-  htmlTag.setAttribute('data-theme', isLight ? 'dark' : 'light');
-  themeToggle.textContent = isLight ? '☀️' : '🌙';
-  themeImage.src = isLight ? 'assets/dark.png' : 'assets/light.png';
+  const newTheme = isLight ? 'dark' : 'light';
+  
+  // Use requestAnimationFrame for smooth transitions
+  requestAnimationFrame(() => {
+    htmlTag.setAttribute('data-theme', newTheme);
+    themeToggle.textContent = isLight ? '☀️' : '🌙';
+    themeImage.src = `assets/${newTheme}.png`;
+  });
 });
 
 // Radio Button Logic

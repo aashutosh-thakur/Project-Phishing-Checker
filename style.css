@@ -30,6 +30,11 @@ body {
   --heading-color: #81ecec;
 }
 
+/* Smooth theme transitions */
+body, .container, .result-box {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Theme background image */
 .background img {
   position: fixed;
@@ -40,6 +45,7 @@ body {
   object-fit: cover;
   z-index: -1;
   filter: blur(8px);
+  transition: opacity 0.3s ease;
 }
 
 /* Header */
@@ -66,6 +72,7 @@ header {
   color: transparent;
 }
 
+/* Optimize theme toggle */
 .theme-toggle {
   font-size: 2.5rem;
   background: none;
@@ -74,6 +81,7 @@ header {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.1s ease;
+  will-change: transform;
 }
 
 .theme-toggle:active {
