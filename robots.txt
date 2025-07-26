@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR_USERNAME.github.io/phishing-content-checker/sitemap.xml
+Sitemap: https://aashutosh-thakur.github.io/PhishingChecker/sitemap.xml
