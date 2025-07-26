@@ -1,4 +1,4 @@
-# Phishing Content Checker
+# Phishing Content Checker (Taken Help from AI)
 
 A web-based application that analyzes PDFs, images, and text content to detect potential phishing attempts using keyword matching and OCR technology.
 
