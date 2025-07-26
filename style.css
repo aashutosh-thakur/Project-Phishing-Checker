@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 body {
@@ -69,6 +71,13 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease;
+}
+
+.theme-toggle:active {
+  transform: scale(0.9);
 }
 
 /* Main container */
@@ -131,11 +140,14 @@ header {
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.1s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.submit-btn:hover {
+.submit-btn:hover, .submit-btn:active {
   background-color: #74b9ff;
+  transform: scale(0.98);
 }
 
 /* Result box */
@@ -179,4 +191,27 @@ header {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Fast click for all interactive elements */
+button, input, label, .theme-toggle {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Radio button labels for better touch targets */
+.input-options label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.1s ease;
+  border-radius: 5px;
+}
+
+.input-options label:active {
+  background: rgba(0,0,0,0.1);
 }
