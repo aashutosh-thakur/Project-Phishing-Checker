@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Content Checker</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1 class="project-title">Phishing Content Checker</h1>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </header>
+
+  <div class="background">
+    <img id="theme-image" src="assets/light.png" alt="Theme Illustration" />
+  </div>
+
+  <div class="container">
+    <div class="input-options">
+      <label><input type="radio" name="fileType" value="pdf" checked> PDF</label>
+      <label><input type="radio" name="fileType" value="image"> Image</label>
+      <label><input type="radio" name="fileType" value="text"> Text</label>
+    </div>
+
+    <div id="file-upload" class="input-section">
+      <input type="file" id="fileInput" />
+    </div>
+
+    <div id="text-input" class="input-section hidden">
+      <textarea id="textBox" placeholder="Paste your email or text content here..."></textarea>
+    </div>
+
+    <button id="submitBtn" class="submit-btn">Submit</button>
+
+    <div id="result" class="result-box">Result will appear here...</div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
